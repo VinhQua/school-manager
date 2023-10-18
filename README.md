@@ -1,4 +1,6 @@
 # school-manager
 
+# Frontend
+![Screens](https://github.com/VinhQua/school-manager/blob/main/frontend/screens.drawio)
 # Backend
 ![ER Diagram](https://github.com/VinhQua/school-manager/blob/main/school%20manager.drawio.svg)
