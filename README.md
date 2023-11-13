@@ -19,7 +19,7 @@ a dashboard for accountant to keep track of financials quarterly and yearly
 - Redux Toolkit
 - TailwindCss
 - DaisyUi
-- big-react-calendar
+- react-big-calendar
 - react-icons
   
 
