@@ -1,4 +1,6 @@
 # school-manager
+a dashboard for teachers and managers to keep track of students' attendance and learning performance daily, monthly, quarterly and yearly.
+a dashboard for accountant to keep track of financials quarterly and yearly 
 # GitFlow
 - fork the repo
 - git pull origin main
@@ -17,6 +19,8 @@
 - Redux Toolkit
 - TailwindCss
 - DaisyUi
+- react-big-calendar
+- react-icons
   
 
 > Install dependencies && Start developing
@@ -25,11 +29,13 @@
 - npm run dev
 
 # Backend
+URL(https://school-manager-production.up.railway.app/)
 > Architecture
 - NodeJs
 - ExpressJs
 - Sequelize ORM
 - Postgresql
+- cloudinary
 
 > Install dependencies && Start developing
 - cd backend

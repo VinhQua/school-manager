@@ -6,11 +6,7 @@ const errorHandler = require("./middlewares/error-handler");
 const notFound = require("./middlewares/not-found");
 const fileUpload = require("express-fileupload");
 // Routes
-const product = require("./route/productRouter");
-const auth = require("./route/authRouter");
-const user = require("./route/userRoute");
-const order = require("./route/orderRouter");
-const review = require("./route/reviewRouter");
+
 const app = express();
 
 //Swagger UI
@@ -19,7 +15,7 @@ const app = express();
 const cors = require("cors");
 const { connect } = require("./db/connect");
 app.use(cors());
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.set("trust proxy", true);
 //middlewares
 app.use(express.static("./public"));
@@ -27,17 +23,7 @@ app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(fileUpload({ useTempFiles: true }));
 //routes
-app.get("/", (req, res) => res.send(`File Upload`));
-// auth
-app.use("/api/v1/auth", auth);
-// orders
-app.use("/api/v1/orders", order);
-// products
-app.use("/api/v1/products", product);
-// reviews
-app.use("/api/v1/reviews", review);
-// users
-app.use("/api/v1/users", user);
+app.get("/", (req, res) => res.send(`School Manager API`));
 
 //not found
 app.use(notFound);
