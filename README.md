@@ -29,6 +29,7 @@ a dashboard for accountant to keep track of financials quarterly and yearly
 - npm run dev
 
 # Backend
+URL(https://school-manager-production.up.railway.app/)
 > Architecture
 - NodeJs
 - ExpressJs
