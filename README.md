@@ -19,6 +19,8 @@ a dashboard for accountant to keep track of financials quarterly and yearly
 - Redux Toolkit
 - TailwindCss
 - DaisyUi
+- big-react-calendar
+- react-icons
   
 
 > Install dependencies && Start developing
@@ -32,6 +34,7 @@ a dashboard for accountant to keep track of financials quarterly and yearly
 - ExpressJs
 - Sequelize ORM
 - Postgresql
+- cloudinary
 
 > Install dependencies && Start developing
 - cd backend
