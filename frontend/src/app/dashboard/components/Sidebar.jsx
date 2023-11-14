@@ -5,12 +5,11 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { closeSideBar } from "@/features/settings/settingSlice";
 import { MdOutlineCancel } from "react-icons/md";
+import NavLinks from "./Navlinks";
 const Sidebar = () => {
   const { isSidebarActive } = useSelector((store) => store.setting);
   const dispatch = useDispatch();
-  const activeLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md m-2`;
-  const normalLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-base-300 hover:text-neutral hover:bg-base-100 m-2";
+
   return (
     <div
       className={`${
@@ -41,6 +40,7 @@ const Sidebar = () => {
                 </button>
               </div>
             </div>
+            <NavLinks />
           </>
         )}
       </div>
