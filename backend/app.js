@@ -6,7 +6,7 @@ const errorHandler = require("./middlewares/error-handler");
 const notFound = require("./middlewares/not-found");
 const fileUpload = require("express-fileupload");
 // Routes
-
+const student = require("./route/studentRoute");
 const app = express();
 
 //Swagger UI
@@ -24,7 +24,8 @@ app.use(cookieParser(process.env.JWT_SECRET));
 app.use(fileUpload({ useTempFiles: true }));
 //routes
 app.get("/", (req, res) => res.send(`School Manager API`));
-
+//Students
+app.use("/api/v1/students", student);
 //not found
 app.use(notFound);
 //error handler
