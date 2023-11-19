@@ -11,6 +11,12 @@ const config: Config = {
       fontSize: {
         14: "14px",
       },
+      borderWidth: {
+        1: "1px",
+      },
+      borderColor: {
+        color: "rgba(0,0,0,0.1)",
+      },
     },
   },
   plugins: [require("daisyui")],
