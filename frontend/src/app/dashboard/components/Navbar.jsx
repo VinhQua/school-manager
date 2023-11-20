@@ -4,6 +4,7 @@ import {
   setScreenSize,
   openSideBar,
   closeSideBar,
+  toggleUserProfile,
 } from "@/features/settings/settingSlice";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,6 +12,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import UserProfile from "./UserProfile";
 import avatar from "../../../assets/platypus.png";
 import Image from "next/image";
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
@@ -71,7 +73,11 @@ const Navbar = () => {
               dotColor={"rgb(254,201,15)"}
               icon={<RiNotification3Line />}
             />
-            <div className="tooltip tooltip-bottom" data-tip="Profile">
+            <div
+              className="tooltip tooltip-bottom"
+              data-tip="Profile"
+              onClick={() => dispatch(toggleUserProfile())}
+            >
               <div className="flex items-center gap-2 cursor-pointer p-1 rounded-lg">
                 <Image
                   src={avatar}
@@ -87,6 +93,7 @@ const Navbar = () => {
                 <MdKeyboardArrowDown className="text-neutral text-14" />
               </div>
             </div>
+            <UserProfile />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isSidebarActive: true,
   screenSize: null,
+  isUserProfileOpen: false,
 };
 const settingSlice = createSlice({
   name: "setting",
@@ -20,8 +21,16 @@ const settingSlice = createSlice({
     setScreenSize: (state, { payload }) => {
       state.screenSize = payload;
     },
+    toggleUserProfile: (state) => {
+      state.isUserProfileOpen = !state.isUserProfileOpen;
+    },
   },
 });
-export const { toggleSideBar, openSideBar, closeSideBar, setScreenSize } =
-  settingSlice.actions;
+export const {
+  toggleSideBar,
+  openSideBar,
+  closeSideBar,
+  setScreenSize,
+  toggleUserProfile,
+} = settingSlice.actions;
 export default settingSlice.reducer;
