@@ -6,10 +6,23 @@ const Student = sequelize.define(
 
   {
     fullName: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: {
           msg: `Please enter a student's name`,
+        },
+      },
+    },
+  },
+
+  {
+    contact: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: `Please enter a student's contact`,
         },
       },
     },
