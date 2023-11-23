@@ -35,4 +35,4 @@ const syncTable = async () => {
 
 syncTable();
 
-module.exports = Student;
+module.exports = {Student};
