@@ -14,9 +14,6 @@ const Student = sequelize.define(
         },
       },
     },
-  },
-
-  {
     contact: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,6 +22,30 @@ const Student = sequelize.define(
           msg: `Please enter a student's contact`,
         },
       },
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    dateOfBirth: {
+      type: DataTypes.DATE,
+      allowNull: true,
+    },
+    grade: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    school: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    note: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   { modelName: "Student", tableName: "Student" }
@@ -35,4 +56,4 @@ const syncTable = async () => {
 
 syncTable();
 
-module.exports = {Student};
+module.exports = { Student };

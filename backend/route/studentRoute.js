@@ -14,3 +14,5 @@ router
   .get(getSingleStudent)
   .patch(updateStudent)
   .delete(deleteStudent);
+
+module.exports = router;
