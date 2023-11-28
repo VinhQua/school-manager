@@ -44,7 +44,7 @@ const Student = sequelize.define(
       allowNull: true,
     },
     note: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
   },
@@ -54,6 +54,6 @@ const syncTable = async () => {
   await Student.sync({ alter: true });
 };
 
-syncTable();
+// syncTable();
 
 module.exports = { Student };
