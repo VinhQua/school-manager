@@ -4,9 +4,10 @@ const NotFound = require("../errors/not-found");
 
 const getAllStudents = async (req, res) => {
   let queryObject = {};
-  const students = await Student.findAll({ where: queryObject });
+  const { count, rows } = await Student.findAndCountAll({ where: queryObject });
   res.status(StatusCodes.OK).json({
-    students,
+    numOfStudents: count,
+    students: rows,
   });
 };
 const createStudent = async (req, res) => {
